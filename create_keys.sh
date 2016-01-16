@@ -4,7 +4,7 @@ gen_key() {
   ks="${keytype}_"
   key="keys/ssh_host_${ks}key"
   if [ ! -e "${key}" ] ; then
-    ssh-keygen -t ${keytype} -f "${key}" -N '' -E md5
+    ssh-keygen -t ${keytype} -f "${key}" -N ''
     return $?
   fi
 }
